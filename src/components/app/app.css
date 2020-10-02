@@ -1,0 +1,99 @@
+#profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+section {
+  margin: 20px;
+  width: 80vw;
+  max-width: 900px;
+}
+
+#header {
+  display: grid;
+  grid-template: 200px auto auto / auto;
+  grid-template-areas:
+    "pic"
+    "info"
+    "langs";
+  gap: 4vh 2vw;
+  justify-items: center;
+  align-items: center;
+  justify-content: stretch;
+  align-content: stretch;
+}
+
+#pic {
+  width: 50vw;
+  height: 50vw;
+  max-width: 200px;
+  max-height: 200px;
+  grid-area: pic;
+
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(50, 50, 50, 30%);
+}
+
+#info {
+  grid-area: info;
+  text-align: center;
+}
+
+#info > * {
+  margin: 10px 0;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  opacity: 50%;
+  transition: all .3s ease;
+  margin: 0 10px;
+}
+
+a:hover > .icon {
+  opacity: 100%;
+}
+#langs {
+  grid-area: langs;
+  width: 100%;
+  text-align: center;
+  max-width: 300px;
+}
+
+@media (min-width: 1025px) {
+  #header {
+    grid-template: auto / 200px auto auto;
+    grid-template-areas: "pic info langs";
+  }
+
+  #info {
+    text-align: left;
+  }
+}
+
+.big {
+  font-weight: 800;
+  font-size: 1.2em;
+}
+
+.small {
+  font-weight: 300;
+  font-size: 0.9em;
+}
+
+a {
+  text-decoration: none;
+  color: #0d47a1;
+}
+
+footer {
+  font-size: 0.75em;
+  text-align: center;
+  margin-bottom: 10px;
+}

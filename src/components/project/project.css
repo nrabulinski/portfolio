@@ -1,0 +1,112 @@
+.project {
+    --icon-size: 40px;
+}
+
+.tech {
+    display: block;
+    width: auto;
+    height: auto;
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 16px;
+    margin-right: 10px;
+    text-align: center;
+
+    transition: all .5s ease;
+}
+
+.tech:visited {
+    color: black;
+}
+
+
+.tech > img {
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+.tech > p {
+    margin: 0;
+    user-select: none;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project > * {
+    margin: 0;
+}
+
+.project-name {
+    font-weight: 700;
+}
+
+.project-info {
+    display: grid;
+    grid-template: auto auto / auto;
+    grid-template-areas:
+        "desc"
+        "techs";
+}
+
+.project-info > * {
+    margin: 5px 0;
+}
+
+.project-desc > * {
+    margin: 5px 0;
+}
+
+.project-link:not(:last-child)::after {
+    content: "|";
+    margin: 0 10px;
+}
+
+.techs {
+    display: flex;
+    grid-area: techs;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    /* margin-top: 10px; */
+}
+
+@media (min-width: 1025px) and (hover: hover) {
+    .tech {
+        opacity: 0.5;
+        width: var(--icon-size);
+        height: var(--icon-size);
+        margin: 0;
+    }
+
+    .tech:hover {
+        opacity: 1;
+    }
+
+    .project-info {
+        grid-template: auto / auto var(--icon-size);
+        grid-template-areas: "desc techs";
+    }
+
+    .techs {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .tech > p {
+        position: absolute;
+        top: 10px;
+        left: calc(var(--icon-size) / 2);
+        opacity: 0;
+
+        transition: all .5s ease;
+    }
+
+    .tech:hover > p {
+        left: var(--icon-size);
+        opacity: 1;
+    }
+}
