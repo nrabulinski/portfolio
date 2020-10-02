@@ -25,7 +25,7 @@ const techs = {
 function Tech(props) {
   const tech = techs[props.name] ?? techs['rust'];
   return (
-    <a class="tech" href={tech.link}>
+    <a className="tech" href={tech.link}>
       <img src={tech.icon} alt={`${tech.name} Logo`}></img>
       <p>{tech.name}</p>
     </a>
@@ -34,9 +34,9 @@ function Tech(props) {
 
 function Project(props) {
   return (
-    <div class="project">
-      <p class="project-name">{props.name}</p>
-      <div class="project-info">
+    <div className="project">
+      <p className="project-name">{props.name}</p>
+      <div className="project-info">
         <div className="project-desc">
           {props.children}
           <div className="project-links">
@@ -47,7 +47,7 @@ function Project(props) {
           ))}
           </div>
         </div>
-        <div class="techs">
+        <div className="techs">
           {props.techs.map(tech => (<Tech name={tech} />))}
         </div>
       </div>

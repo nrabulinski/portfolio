@@ -51,13 +51,13 @@ section {
 .icon {
   width: 25px;
   height: 25px;
-  opacity: 50%;
+  opacity: 0.5;
   transition: all .3s ease;
   margin: 0 10px;
 }
 
 a:hover > .icon {
-  opacity: 100%;
+  opacity: 1;
 }
 #langs {
   grid-area: langs;

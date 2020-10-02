@@ -18,10 +18,10 @@ function App() {
           <p id="desc">Full-stack and systems developer</p>
           <div>
             <a href="https://github.com/nrabulinski">
-              <img src={GitHub} class="icon" alt="GitHub Logo"></img>
+              <img src={GitHub} className="icon" alt="GitHub Logo"></img>
             </a>
             <a href="https://www.linkedin.com/in/nrabulinski/">
-              <img src={LinkedIn} class="icon" alt="LinkedIn Logo"></img>
+              <img src={LinkedIn} className="icon" alt="LinkedIn Logo"></img>
             </a>
           </div>
         </div>
@@ -42,7 +42,7 @@ function App() {
       <section id="projects">
         <p className="big">Projects</p>
         <Project name="This website" techs={['react']} links={[['Repository', 'https://github.com/nrabulinski/portfolio']]}>
-          <p>It's my first serious attempt at making a proper, proffesional-looking and responsive React website.</p>
+          <p>It's my first serious attempt at making a proper, professional-looking and responsive React website.</p>
         </Project>
         <Project name="brainrust" techs={['rust']} links={[['Repository', 'https://github.com/nrabulinski/brainrust']]}>
           <p>A simple brainf*ck interpreter and compiler (with LLVM backend) written in Rust. Maintained in my spare time as a fun side-project.</p>
